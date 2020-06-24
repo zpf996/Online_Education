@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress ServletWithoutMappingInspection -->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>servlet.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Register_user</servlet-name>
+        <servlet-class>servlet.Register_user</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register_user</servlet-name>
+        <url-pattern>/Register_user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Register_course</servlet-name>
+        <servlet-class>servlet.Register_course</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register_course</servlet-name>
+        <url-pattern>/Register_course</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CoursesDelete</servlet-name>
+        <servlet-class>servlet.CoursesDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CoursesDelete</servlet-name>
+        <url-pattern>/CoursesDelete</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CoursesADD</servlet-name>
+        <servlet-class>servlet.CoursesADD</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CoursesADD</servlet-name>
+        <url-pattern>/CoursesADD</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CoursesUpdate</servlet-name>
+        <servlet-class>servlet.CoursesUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CoursesUpdate</servlet-name>
+        <url-pattern>/CoursesUpdate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Course_Content</servlet-name>
+        <servlet-class>servlet.Course_Content</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Course_Content</servlet-name>
+        <url-pattern>/Course_Content</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Register_payment</servlet-name>
+        <servlet-class>servlet.Register_payment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register_payment</servlet-name>
+        <url-pattern>/Register_payment</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
